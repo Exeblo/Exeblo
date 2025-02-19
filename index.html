@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/80242b6874.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c9b87a4bee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+         <nav>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+             <ul class="menu">
+                    <li><i class="fa-regular fa-user"></i></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#acerca-de-mi">Acerca de mí</a></li>
+                    <li><a href="#trabajos">Trabajos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="../formulario/formulario.html">Contáctate</a></li>
+            </ul>
+        </nav>
+   
+    </header>
+  
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Regresiva</title>
+</head>
+
+
+    <section id="inicio" class="section">
+        <h1>¡Hola! Soy Pablo Ormachea</h1>
+        <div class="foto">
+        <img src="../Practica_1/imagenes/mifoto.jpg" width="150"/>
+        </div>
+       <div class="Bienvenido">
+        <p>Bienvenido a mi página personal. Aquí puedes conocer más sobre mí y mi trabajo como peón rural.</p>
+       </div>
+
+
+    <section id="micumple" class="cumple">
+        <h1 id="cumpleaños">Mi cumple es en:</h1>
+
+
+    <h2 id="cuentaRegresiva"></h2>
+
+    <script>
+        function actualizarCuentaRegresiva() {
+            let fechaObjetivo = new Date(2025, 2, 16, 23, 59, 59); // new date: AÑO, MES (0 =ENERO, 11= DICIEMBRE), DIA, HORA, MINUTOS SEGUNDOS
+            let ahora = new Date();
+            let diferencia = fechaObjetivo - ahora; // Diferencia en milisegundos
+
+            if (diferencia <= 0) {
+                document.getElementById("cuentaRegresiva").innerText = "¡Hoy es mi cumple!";
+                return;
+            }
+
+            let dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            let horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            let segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+            document.getElementById("cuentaRegresiva").innerText = 
+                `${dias} días, ${horas}h ${minutos}m ${segundos}s`;
+        }
+
+        // Actualiza cada segundo
+        setInterval(actualizarCuentaRegresiva, 1000);
+
+        // Ejecutar inmediatamente al cargar la página
+        actualizarCuentaRegresiva();
+    </script>
+</section>
+
+       
+
+
+    </section>
+
+    <section id="acerca-de-mi" class="section">
+        <h2>Acerca de mí</h2>
+        <p>Soy peón rural con experiencia en el manejo de cítricos. Me apasiona trabajar al aire libre y contribuir al crecimiento sostenible de la agricultura.</p></section>
+
+    <section id="trabajos" class="section">
+        <h2>Trabajos</h2>
+        <div class="work-item">
+            <h3>Vivero de Cítrico</h3>
+            <p>Actualmente trabajo en un vivero especializado en cítricos, donde participo en tareas de cultivo, mantenimiento y cosecha.</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="section">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme a través de:</p>
+        <ul>
+            <li>Email: <a href="mailto:exekielormachea@gmail.com">exekielormachea@gmail.com</a></li>
+        </ul>
+    </section>
+   
+
+    <footer>
+        <p>&copy; 2024 Pablo Ormachea. Todos los derechos reservados.</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
